@@ -20,6 +20,33 @@
             Feladat4();
             Feladat6();
             Feladat7();
+            Feladat8();
+        }
+
+        private static void Feladat8()
+        {
+            Console.WriteLine("\nFeladat 8:");
+            int CsereDolgozo;
+            double CsereUtHossz;
+            for (int i = 0; i < UtHosszTMB.Length; i++)
+            {
+                for (int j = 0; j <UtHosszTMB.Length -1; j++)
+                {
+                    if (UtHosszTMB[j] < UtHosszTMB[j + 1])
+                    {
+                        CsereUtHossz = UtHosszTMB[j];
+                        CsereDolgozo = DolgozokTMB[j];
+                        UtHosszTMB[j] = UtHosszTMB[j + 1];
+                        DolgozokTMB[j] = DolgozokTMB[j + 1];
+                        UtHosszTMB[j + 1] = CsereUtHossz;
+                        DolgozokTMB[j + 1] = CsereDolgozo;
+                    }
+                }
+            }
+            for (int i = 0; i < 18; i++)
+            {
+                Console.WriteLine($"{i + 1}. nap -> dolgozók szánma: {DolgozokTMB[i]} -> {UtHosszTMB[i]:0.00}");
+            }
         }
 
         private static void Feladat7()
