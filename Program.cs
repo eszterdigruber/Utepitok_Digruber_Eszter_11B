@@ -18,6 +18,40 @@
             Feladat_02();
             Feladat3();
             Feladat4();
+            Feladat6();
+            Feladat7();
+        }
+
+        private static void Feladat7()
+        {
+            Console.WriteLine("\nFeladat 7:");
+            bool Vane = false;
+            Console.Write("Kérem adjon meg 8-12 között egy számot: ");
+            int KeresSzam = int.Parse(Console.ReadLine());
+            for (int i = 0; i < DolgozokTMB.Length; i++)
+            {
+                if (KeresSzam == DolgozokTMB[i])
+                { 
+                    Vane = true; 
+                    break; 
+                }
+            }
+            if (Vane == true) 
+            { Console.WriteLine("Igen volt ilyen nap"); }
+            else 
+            { Console.WriteLine("Nem volt ilyen nap"); }
+        }
+
+        private static void Feladat6()
+        {
+            Console.WriteLine("\nFeladat 6:");
+            int db65 = 0;
+            for (int i = 0; i < UtHosszTMB.Length; i++)
+            {
+                if (65 < UtHosszTMB[i])
+                { db65++; }
+            }
+            Console.WriteLine($"Ennyi alkalommal volt 65 méter feletti: {db65}");
         }
 
         private static void Feladat4()
