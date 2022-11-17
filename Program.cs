@@ -29,12 +29,12 @@
             Console.WriteLine("\nFeladat 9:");
             int db = 0;
             double CelUt = 0;
-            while (CelUt == 305)
+            while (CelUt < 305)
             {
                 CelUt += UtHosszTMB[db];
                 db++;
             }
-            Console.WriteLine($"Ennyi nap kell minimum: {db} Út hossza: {CelUt}");
+            Console.WriteLine($"Ennyi nap kell minimum: {db} \nÚt hossza: {CelUt:0.00}");
         }
 
         private static void Feladat8()
