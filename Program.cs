@@ -21,6 +21,20 @@
             Feladat6();
             Feladat7();
             Feladat8();
+            Feladat9();
+        }
+
+        private static void Feladat9()
+        {
+            Console.WriteLine("\nFeladat 9:");
+            int db = 0;
+            double CelUt = 0;
+            while (CelUt == 305)
+            {
+                CelUt += UtHosszTMB[db];
+                db++;
+            }
+            Console.WriteLine($"Ennyi nap kell minimum: {db} Út hossza: {CelUt}");
         }
 
         private static void Feladat8()
