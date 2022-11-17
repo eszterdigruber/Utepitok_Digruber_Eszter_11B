@@ -16,6 +16,37 @@
         {
             Feladat1();
             Feladat_02();
+            Feladat3();
+            Feladat4();
+        }
+
+        private static void Feladat4()
+        {
+            Console.WriteLine("\nFeladat 4:");
+            double MaxHossz = double.MinValue;
+            int MaxHely = 0;
+            int DolgozokSzama = 0;
+            for (int i = 0; i < UtHosszTMB.Length; i++)
+            {
+                if (MaxHossz < UtHosszTMB[i])
+                {
+                    MaxHossz = UtHosszTMB[i];
+                    DolgozokSzama = DolgozokTMB[i];
+                }
+            }
+            Console.WriteLine($"Max út hossz: {MaxHossz}, dolgozók száma: {DolgozokSzama}");
+        }
+
+        private static void Feladat3()
+        {
+            Console.WriteLine("\nFeladat 3:");
+            int OsszDolgozo = 0;
+            for (int i = 0; i < 18; i++)
+            {
+                OsszDolgozo += DolgozokTMB[i];
+            }
+            double AtlagDolgozok = (double)OsszDolgozo / DolgozokTMB.Length;
+            Console.WriteLine($"Dolgozók számának átlaga: {AtlagDolgozok:0.00}");
         }
 
         private static void Feladat_02()
